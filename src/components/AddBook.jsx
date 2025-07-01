@@ -138,7 +138,7 @@ export function AddBook() {
 
           <div>
             <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-2">
-              Price ($) *
+              Price (₹) *
             </label>
             <input
               id="price"
@@ -152,7 +152,7 @@ export function AddBook() {
               className={`input-field ${
                 formik.touched.price && formik.errors.price ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''
               }`}
-              placeholder="0.00"
+              placeholder="0"
             />
             {formik.touched.price && formik.errors.price && (
               <p className="mt-1 text-sm text-red-600">{formik.errors.price}</p>

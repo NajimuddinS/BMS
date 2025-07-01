@@ -8,7 +8,7 @@ class GeminiService {
     }
     
     this.genAI = new GoogleGenerativeAI(apiKey)
-    this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
+    this.model = this.genAI.getGenerativeModel({ model: 'gemini-2.5-flash' })
   }
 
   async getBookRecommendations(title, author) {
@@ -28,13 +28,12 @@ class GeminiService {
       const response = await result.response
       const text = response.text()
       
-      // Clean up the response and parse JSON
       const cleanedText = text.replace(/```json\n?|\n?```/g, '').trim()
       
       try {
         const recommendations = JSON.parse(cleanedText)
         if (Array.isArray(recommendations) && recommendations.length > 0) {
-          return recommendations.slice(0, 3) // Ensure we only return max 3 recommendations
+          return recommendations.slice(0, 3)
         }
         throw new Error('Invalid recommendations format')
       } catch (parseError) {
@@ -48,7 +47,6 @@ class GeminiService {
   }
 
   getFallbackRecommendations(title, author) {
-    // Provide fallback recommendations based on common genres
     const fallbackRecommendations = {
       'fiction': [
         { title: 'To Kill a Mockingbird', author: 'Harper Lee' },
@@ -71,8 +69,7 @@ class GeminiService {
         { title: 'The Power of Now', author: 'Eckhart Tolle' }
       ]
     }
-
-    // Try to match based on common keywords in title/author
+    
     const lowerTitle = title.toLowerCase()
     const lowerAuthor = author.toLowerCase()
     
