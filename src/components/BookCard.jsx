@@ -11,7 +11,7 @@ export function BookCard({ book }) {
                 {book.genre}
               </span>
               <span className="text-lg font-bold text-secondary-600">
-                ${book.price}
+                ₹{book.price}
               </span>
             </div>
             

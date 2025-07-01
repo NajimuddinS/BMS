@@ -28,7 +28,7 @@ function getDefaultBooks() {
       title: 'Sapiens: A Brief History of Humankind',
       author: 'Yuval Noah Harari',
       genre: 'History',
-      price: 24.99,
+      price: 250,
       description: 'A compelling narrative that traces the evolution of Homo sapiens from insignificant apes to rulers of the world.',
       createdAt: '2024-01-15T10:00:00.000Z'
     },
@@ -37,7 +37,7 @@ function getDefaultBooks() {
       title: 'The Clean Coder',
       author: 'Robert C. Martin',
       genre: 'Technology',
-      price: 32.50,
+      price: 300,
       description: 'A code of conduct for professional programmers, covering the attitudes, disciplines, and techniques of effective programming.',
       createdAt: '2024-01-16T10:00:00.000Z'
     },
@@ -46,7 +46,7 @@ function getDefaultBooks() {
       title: 'The Great Gatsby',
       author: 'F. Scott Fitzgerald',
       genre: 'Fiction',
-      price: 15.99,
+      price: 260,
       description: 'A classic American novel set in the Jazz Age, exploring themes of decadence, idealism, and the American Dream.',
       createdAt: '2024-01-17T10:00:00.000Z'
     },
@@ -55,7 +55,7 @@ function getDefaultBooks() {
       title: 'Atomic Habits',
       author: 'James Clear',
       genre: 'Self-Help',
-      price: 18.99,
+      price: 100,
       description: 'A practical guide to building good habits and breaking bad ones through small changes that deliver remarkable results.',
       createdAt: '2024-01-18T10:00:00.000Z'
     }

@@ -50,7 +50,7 @@ export function BookDetail() {
                 {book.genre}
               </span>
               <span className="text-2xl font-bold text-secondary-600">
-                ${book.price}
+                ₹{book.price}
               </span>
             </div>
 
