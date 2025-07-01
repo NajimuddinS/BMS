@@ -47,7 +47,7 @@ export function AddBook() {
     onSubmit: (values) => {
       const book = {
         ...values,
-        price: parseFloat(values.price)
+        price: parseInt(values.price)
       }
       
       addBook(book)
